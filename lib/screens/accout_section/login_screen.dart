@@ -38,7 +38,8 @@ class LoginScreen extends StatelessWidget {
                   textField(labelText: 'Password', context: context),
                   SizedBox(height: sizedBoxHeight(context, adjustHeight: 0.05)),
                   button(
-                    onPresed: () {},
+                    onPresed:
+                        () => Navigator.pushNamed(context, '/createAccount'),
                     context: context,
                     buttonText: 'Create Account',
                   ),

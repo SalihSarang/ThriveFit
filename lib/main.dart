@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:levelup/screens/accout_section/create_account_screen.dart';
 import 'package:levelup/screens/accout_section/login_screen.dart';
 
 void main() {
@@ -10,6 +11,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: LoginScreen());
+    return MaterialApp(
+      initialRoute: '/login',
+      routes: {
+        '/login': (context) => LoginScreen(),
+        '/createAccount': (context) => CreateAccountScreen(),
+      },
+    );
   }
 }
